@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Registrasi Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="form-card">
+      <header class="form-header">
+        <div class="brand-mark">🎓</div>
+        <p class="eyebrow">PENDAFTARAN AKADEMIK</p>
+        <h1>Form Registrasi Mahasiswa</h1>
+        <p class="subtitle">Silakan lengkapi data diri dan informasi akun Anda.</p>
+      </header>
+
+      <form id="registrationForm" novalidate>
+        <h2>Data Pribadi</h2>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="nama">Nama Lengkap <span>*</span></label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+          </div>
+
+          <div class="field">
+            <label for="npm">NPM / NIM <span>*</span></label>
+            <input type="text" id="npm" name="npm" placeholder="Masukkan NPM / NIM" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+          </div>
+
+          <div class="field">
+            <label for="jenisKelamin">Jenis Kelamin <span>*</span></label>
+            <select id="jenisKelamin" name="jenisKelamin" required>
+              <option value="">Pilih jenis kelamin</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+              <option value="Tidak ingin menyebutkan">Tidak ingin menyebutkan</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="tanggalLahir">Tanggal Lahir <span>*</span></label>
+            <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+          </div>
+
+          <div class="field full">
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+        <h2>Informasi Akun</h2>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="username">Username <span>*</span></label>
+            <input type="text" id="username" name="username" placeholder="Buat username" minlength="4" required>
+            <small>Minimal 4 karakter.</small>
+          </div>
+
+          <div class="field">
+            <label for="password">Password <span>*</span></label>
+            <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" minlength="8" required>
+          </div>
+
+          <div class="field">
+            <label for="konfirmasiPassword">Konfirmasi Password <span>*</span></label>
+            <input type="password" id="konfirmasiPassword" name="konfirmasiPassword" placeholder="Ulangi password" required>
+          </div>
+        </div>
+
+        <label class="agreement">
+          <input type="checkbox" id="persetujuan" required>
+          <span>Saya menyatakan bahwa data yang diisi sudah benar.</span>
+        </label>
+
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+
+        <div class="actions">
+          <button type="reset" class="btn btn-secondary">Reset</button>
+          <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+        </div>
+        <p class="form-note">Kolom bertanda <span>*</span> wajib diisi.</p>
+      </form>
+    </section>
+    <footer>© 2026 Form Registrasi Mahasiswa · Contoh proyek pembelajaran</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
